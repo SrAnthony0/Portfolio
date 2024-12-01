@@ -1,0 +1,273 @@
+/* Estilos Gerais */
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.light a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.light a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+/* Ícones sociais */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a, .theme-toggle {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icons a img, .theme-toggle img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Conteúdo Principal */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Tags */
+.tags .tag {
+    display: inline-block;
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.tag-dev {
+    box-shadow: 0px 2px 5px rgba(115, 52, 167, 0.5);
+}
+
+.tag-analyst {
+    box-shadow: 0px 2px 5px rgba(172, 93, 19, 0.5);
+}
+
+.tag-manager {
+    box-shadow: 0px 2px 5px rgba(27, 109, 52, 0.5);
+}
+
+.title {
+    margin-bottom: 80px;
+}
+
+/* Seções */
+.section-title {
+    font-size: 2em;
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.skills, .languages, .competencies, .projects, .educations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill, .language, .competency, .project, .education-item {
+    background-color: #3b3b3b;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    transition: .5s;
+}
+
+.project:hover, .education-item:hover {
+    background-color: #f4f4f4;
+}
+.skill:hover, .language:hover, .competency:hover {
+    transform: scale(1.1);
+}
+
+/* Habilidades */
+.skills .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 10px;
+    justify-content: center;
+}
+
+.skills .skill img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+
+}    
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.project {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.educations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.education-item {
+    background-color: #292929;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    max-width: 300px;
+    flex: 1 1 300px;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    background-color: #3a3a3a;
+}
+
+.education-item img {
+    max-width: 300px;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.education-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.education-item a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar-links a {
+        margin: 5px 0;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Seção de habilidades, idiomas e competências */
+    .skills, .languages, .competencies {
+        margin-top: 20px;
+    }
+}
